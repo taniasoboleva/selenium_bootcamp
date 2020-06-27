@@ -10,10 +10,10 @@ public class RunTest {
 
     @Before
     public void setDriver() {
-        System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+        String userdirLib =  System.getProperty("user.dir") + "\\lib\\";
+        System.setProperty("webdriver.chrome.driver", userdirLib + "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("http://book.theautomatedtester.co.uk/");
     }
 
     @Test
