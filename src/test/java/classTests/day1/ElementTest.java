@@ -1,15 +1,17 @@
-package classTests.day1.activities;
+package classTests.day1;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Activity {
+public class ElementTest {
 
     private WebDriver driver;
-    private String url = "https://www.google.com/";
+    private String url = "https://kristinek.github.io/site/examples/actions";
 
     @Before
     public void setDriver() {
@@ -20,9 +22,18 @@ public class Activity {
     }
 
     @Test
-    public void driverTest() {
+    public void findBy(){
         driver.get(url);
-        System.out.println(driver.getCurrentUrl());
+
+        WebElement inputText = driver.findElement(By.id("text"));
+        inputText.clear();
+        inputText.sendKeys("Hello World!");
+
+        WebElement resultButton = driver.findElement(By.id("result_button_text"));
+        resultButton.click();
+
+        WebElement checkBox1 = driver.findElement(By.cssSelector("[id='vfb-6-0']"));
+        checkBox1.click();
     }
 
     @After

@@ -32,5 +32,4 @@ public class PageFactorySamplePage extends BaseFunc {
     public void clickElement() {
         //some code
     }
-
 }

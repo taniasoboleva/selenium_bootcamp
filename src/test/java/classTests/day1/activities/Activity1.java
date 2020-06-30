@@ -1,4 +1,4 @@
-//package samplesPages;
+//package classTests.day1.activities;
 //
 //import org.junit.jupiter.api.Test;
 //import org.openqa.selenium.By;
@@ -32,7 +32,6 @@
 //
 //        // find element in menu "Woman"
 //        WebElement menuWoman = ;
-//
 //
 //    }
 //
