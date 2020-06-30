@@ -23,10 +23,12 @@ public class BaseFuncSample {
 
     // method which finds WebElement and returning it, that we could interact with it
     public WebElement getElement(By locator){
+
         return driver.findElement(locator);
     }
 
     public List<WebElement> getElements(By locator){
+
         return driver.findElements(locator);
     }
 

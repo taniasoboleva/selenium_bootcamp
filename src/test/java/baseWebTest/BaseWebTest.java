@@ -1,5 +1,7 @@
 package baseWebTest;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +14,7 @@ public class BaseWebTest {
     protected WebDriver driver;
 
     //Annotation @BeforeClass will be run before each test class which extends this class
-    @BeforeClass
+    @Before
     public void setUp() {
         //instead of add whole path, we can get path by using System.getProperty
         String userdirLib =  System.getProperty("user.dir") + "\\lib\\";
@@ -32,7 +34,7 @@ public class BaseWebTest {
     }
 
     //Annotation @AfterClass will be run after each test class which extends this class
-    @AfterClass
+    @After
     public void closeBrowser() {
         Assertions.assertNotNull(driver, "Window already closed");
         driver.quit();

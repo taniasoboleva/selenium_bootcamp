@@ -9,7 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class Sample2webElementActions {
-        // Methods, action, locators and webElements alsways should be at page Object classes
+        // Methods, action, locators and webElements always should be at page Object classes
 
         // Element - click on it
         WebElement elementClick = driver.findElement(By.id("id"));
