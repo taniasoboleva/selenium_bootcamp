@@ -13,12 +13,11 @@ public class HomePage extends BaseFunc {
     }
 
     @FindBy(how = How.LINK_TEXT, using = "Chapter1")
-    private WebElement chapterone;
+    public WebElement chapterone;
 
 //    @FindBy(how = How.ID, using = "html5div")
 //    private WebElement textBox;
 
-//    @FindBy(how = How.ID, using = "multiplewindow")
     public void clickChapterOne() {
         chapterone.click();
     }

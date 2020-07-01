@@ -2,6 +2,7 @@ package classTests.day1.activities;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,7 +27,7 @@ public class Activity2 {
     public void practiceWithWebElement() {
 
         //find element "Chapter 1" and  click on it
-        WebElement chapterOne = driver.findElement(By.id("Chapter1"));
+        WebElement chapterOne = driver.findElement(By.linkText("Chapter1"));
         chapterOne.click();
 
         ChapterOnePage homePage = new ChapterOnePage(driver);

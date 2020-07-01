@@ -14,7 +14,7 @@ public class BaseWebTest {
     protected WebDriver driver;
 
     //Annotation @BeforeClass will be run before each test class which extends this class
-    @Before
+    @BeforeClass
     public void setUp() {
         //instead of add whole path, we can get path by using System.getProperty
         String userdirLib =  System.getProperty("user.dir") + "\\lib\\";
@@ -34,7 +34,7 @@ public class BaseWebTest {
     }
 
     //Annotation @AfterClass will be run after each test class which extends this class
-    @After
+    @AfterClass
     public void closeBrowser() {
         Assertions.assertNotNull(driver, "Window already closed");
         driver.quit();
