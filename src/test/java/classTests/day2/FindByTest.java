@@ -1,4 +1,4 @@
-package classTests;
+package classTests.day2;
 
 import org.junit.After;
 import org.junit.Before;

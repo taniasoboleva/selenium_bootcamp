@@ -1,6 +1,8 @@
 package pageObjects.day2;
 
 import core.BaseFunc;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,4 +35,5 @@ public class AlertPage extends BaseFunc {
     public void clickSimplePrompt() {
         simplePrompt.click();
     }
+
 }
