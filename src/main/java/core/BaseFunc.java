@@ -9,11 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 
 // This is Parent PageObject class should contains common methods which will be used for many PageObjects to prevent code duplication.
 public class BaseFunc {
 
-    private WebDriver driver;
+    public WebDriver driver;
     private WebDriverWait wait;
     private Alert alert;
     //    private Select select = new Select();
@@ -22,7 +24,7 @@ public class BaseFunc {
     public BaseFunc(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 50);
     }
 
     public void acceptAlert() {
@@ -45,11 +47,15 @@ public class BaseFunc {
         select.selectByVisibleText(optionName);
     }
 
-    public void waitForElementToBeClickable(WebElement element, String expectedText){
-        wait.until(ExpectedConditions.textToBePresentInElement(element, expectedText));
-    }
+//    public void waitForElementToBeClickable(WebElement element, String expectedText){
+//        wait.until(ExpectedConditions.textToBePresentInElement(element, expectedText));
+//    }
     public void waitElementAppeared(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitListElementsAppeared(List<WebElement> elements){
+        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
     }
 
 }
